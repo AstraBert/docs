@@ -33,6 +33,11 @@
           "icon": "github"
         },
         {
+          "anchor": "Donate",
+          "href": "https://github.com/sponsors/AstraBert",
+          "icon": "heart"
+        },
+        {
           "anchor": "Community",
           "href": "https://discord.gg/qxzFz9VE",
           "icon": "discord"
@@ -52,8 +57,12 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
+        "label": "Reach out to us",
         "href": "mailto:clelia@pdfitdown.eu"
+      },
+      {
+        "label": "Donate",
+        "href": "https://github.com/sponsors/AstraBert"
       }
     ]
   },
