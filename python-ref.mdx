@@ -1,0 +1,58 @@
+---
+title: 'Python API Reference'
+description: 'Adapt PdfItDown to your pipelines by coding it yourself!'
+---
+
+You can install **PdfItDown** by running the following command:
+
+<CodeGroup>
+
+  ```bash pip
+  pip install pdfitdown
+  ```
+
+```bash uv
+uv pip install pdfitdown
+```
+
+</CodeGroup>
+
+### Use PdfItDown within your script
+
+Ypu should initialize PdfItDown by instantiating the `Converter` class:
+
+```python
+from pdfitdown.pdfconversion import Converter
+
+converter = Converter()
+```
+
+After this, you can use PdfItDown to:
+
+- Convert **single files** using the `convert` method:
+
+```python
+# adding a title for the PDF metadata
+converter.convert(file_path = "business_grow.md", output_path = "business_growth.pdf", title="Business Growth for Q3 in 2024")
+# without a title
+converter.convert(file_path = "logo.png", output_path = "logo.pdf")
+```
+
+- Convert **multiple files** at once using the `multiple_convert` method:
+
+```python
+# with custom output paths
+converter.multiple_convert(file_paths = ["business_grow.md", "logo.png"], output_paths = ["business_growth.pdf", "logo.pdf"])
+# with inferred output paths
+converter.multiple_convert(file_paths = ["business_grow.md", "logo.png"])
+```
+
+- Convert an **entire directory** at once using the `convert_directory` method:
+
+```python
+output_paths = converter.convert_directory(directory_path = "tests/data/testdir")
+```
+
+<Warning>
+Be careful: all the documents that you convert need to be supported by PdfItDown, otherwise you'll see a `ValidationError`
+</Warning>

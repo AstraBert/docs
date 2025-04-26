@@ -1,71 +1,64 @@
 ---
 title: Introduction
-description: "Welcome to the home of your new documentation"
+description: "Welcome to PdfItDown documentation"
 ---
 
 <img
   className="block dark:hidden"
-  src="/images/hero-light.png"
+  src="/images/hero-light.svg"
   alt="Hero Light"
 />
 <img
   className="hidden dark:block"
-  src="/images/hero-dark.png"
+  src="/images/hero-dark.svg"
   alt="Hero Dark"
 />
 
 ## Setting up
 
-The first step to world-class documentation is setting up your editing environments.
+To set uo PdfItDown, it is good practice to create an isolated development environment
 
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
+<CodeGroup>
 
-## Make it yours
+  ```bash venv
+  python3 -m venv .venv
+  source .venv/bin/activate
+  pip install pdfitdown
+  ```
 
-Update your docs to your brand and add valuable content for the best user conversion.
+```bash conda
+# you can use all python versions above 3.9
+conda create -n pdfitdown python=3.11
+conda activate pdfitdown
+pip install pdfitdown
+```
 
-<CardGroup cols={2}>
+</CodeGroup>
+
+## Choose how to use it
+
+Once you have PdfItDown set up, you can choose how to use it:
+
+<CardGroup cols={3}>
   <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
+    title="In Python Scripts"
     icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
+    href="/python-ref"
   >
-    Automatically generate endpoints from an OpenAPI spec
+    Adapt PdfItDown to your pipelines by coding it yourself!
   </Card>
   <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/content/components/accordions"
+    title="In the CLI"
+    icon="terminal"
+    href="/cli"
   >
-    Build interactive features and designs to guide your users
+    If you're a terminal lover, this is perfect for you :)
   </Card>
   <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
+    title="With the User Interface"
+    icon="palette"
+    href="/ui"
   >
-    Check out our showcase of our favorite documentation
+    Optimal if you just want to convert files effortlessly
   </Card>
 </CardGroup>
