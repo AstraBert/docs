@@ -23,6 +23,17 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Built With PdfItDown",
+        "groups": [
+          {
+            "group": "Ingest-Anything",
+            "pages": [
+              "built-with-pdfitdown/introduction"
+            ]
+          }
+        ]
       }
     ],
     "global": {
